@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Odds Calculator</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.0/css/foundation.min.css">
+  </head>
+  <body>
+    <div ng-app="oddsApp">
+      <div ng-controller="OddsController" ng-init="odds.value=1;odds.format='decimal';">
+        <form novalidate class="css-form">
+          <label for="odds-input" class="left">Odds</label>
+          <input type="text" id="odds-input" ng-model="odds.value" />
+          <div>
+            <ul>
+              <li>
+                <label>Decimal</label>
+                <input type="radio" ng-model="odds.format" value="decimal" />
+              </li>
+              <li>
+                <label>Fractional</label>
+                <input type="radio" ng-model="odds.format" value="fractional" />
+              </li>
+            </ul>
+          </div>
+        </form>
+        <label>
+          <pre class="panel">
+            {{ display(odds.format, odds.value) }}
+          </pre>
+        </label>
+      </div>
+    </div>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular.min.js"></script>
+    <script type="text/javascript" src="odds.js"></script>
+  </body>
+ </html>
