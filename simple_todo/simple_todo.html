@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Odds Simple TODO</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.0/css/foundation.min.css">
+</head>
+<body>
+  <div ng-app="todoApp">
+    <div ng-controller="TodoController">
+      <form novalidate class="css-form">
+        <label for="todo-input">Task</label>
+        <input type="text" id="todo-input" ng-model="todo.value" />
+        <input type="button" ng-click="{{ addTask(todo.value) }}" value="Add Task"/>
+      </form>
+      <label>
+        <span ng-repeat="task in todo.tasks">
+          {{invoice.total(c) | currency:c}}
+          List of tasks with a delete button with each one
+        </pre>
+      </label>
+    </div>
+  </div>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular.min.js"></script>
+  <script type="text/javascript" src="odds.js"></script>
+</body>
+</html>
