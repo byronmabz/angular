@@ -7,3 +7,4 @@
 * push together
 * change git user
 * and again
+* synching test
